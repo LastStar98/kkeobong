@@ -21,9 +21,7 @@
       --radius: 18px;
       --shadow: 0 12px 40px rgba(44, 36, 24, 0.08);
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
       background: var(--bg);
@@ -34,403 +32,126 @@
         radial-gradient(ellipse at 20% 0%, rgba(196, 92, 38, 0.06) 0%, transparent 50%),
         radial-gradient(ellipse at 80% 100%, rgba(45, 106, 79, 0.05) 0%, transparent 45%);
     }
-
-    /* 메인 사이트와 같은 상단 네비 */
     .topnav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 14px 18px;
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 960px; margin: 0 auto; padding: 14px 18px;
     }
     .topnav-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      color: var(--ink);
-      font-weight: 700;
-      font-size: 0.98rem;
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--ink); font-weight: 700; font-size: 0.98rem;
     }
     .topnav-brand .logo {
-      width: 34px; height: 34px;
-      border-radius: 50%;
-      background: #6f3658;
-      color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.85rem;
-      font-weight: 800;
+      width: 34px; height: 34px; border-radius: 50%; background: #6f3658; color: #fff;
+      display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 800;
     }
-    .topnav-right {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    .wrap {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 12px 16px 60px;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 24px;
-    }
-
+    .topnav-right { font-size: 0.78rem; color: var(--muted); }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 12px 16px 60px; }
+    header { text-align: center; margin-bottom: 24px; }
     header .badge {
-      display: inline-block;
-      font-size: 12px;
-      letter-spacing: 0.12em;
-      color: #6f3658;
-      border: 1px solid rgba(111, 54, 88, 0.35);
-      padding: 4px 12px;
-      border-radius: 999px;
-      margin-bottom: 12px;
-      background: #f6eaf0;
+      display: inline-block; font-size: 12px; letter-spacing: 0.12em; color: #6f3658;
+      border: 1px solid rgba(111, 54, 88, 0.35); padding: 4px 12px; border-radius: 999px;
+      margin-bottom: 12px; background: #f6eaf0;
     }
-
-    header h1 {
-      font-size: 1.55rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    header p {
-      margin-top: 8px;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
+    header h1 { font-size: 1.55rem; font-weight: 700; letter-spacing: -0.02em; }
+    header p { margin-top: 8px; color: var(--muted); font-size: 0.92rem; }
     .card {
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      border: 1px solid var(--line);
-      padding: 20px 16px;
-      margin-bottom: 18px;
+      background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+      border: 1px solid var(--line); padding: 20px 16px; margin-bottom: 18px;
     }
-
     .card h2 {
-      font-size: 1.05rem;
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      font-size: 1.05rem; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
     }
-
     .card h2::before {
-      content: "";
-      width: 4px;
-      height: 1.1em;
-      background: #6f3658;
-      border-radius: 2px;
+      content: ""; width: 4px; height: 1.1em; background: #6f3658; border-radius: 2px;
     }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    @media (max-width: 520px) {
-      .form-grid { grid-template-columns: 1fr; }
-    }
-
-    label {
-      display: block;
-      font-size: 0.78rem;
-      color: var(--muted);
-      margin-bottom: 5px;
-      letter-spacing: 0.02em;
-    }
-
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 520px) { .form-grid { grid-template-columns: 1fr; } }
+    label { display: block; font-size: 0.78rem; color: var(--muted); margin-bottom: 5px; }
     input, select {
-      width: 100%;
-      padding: 11px 12px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: #fff;
-      font-size: 0.95rem;
-      color: var(--ink);
-      outline: none;
-      transition: border-color 0.15s;
+      width: 100%; padding: 11px 12px; border: 1px solid var(--line); border-radius: 12px;
+      background: #fff; font-size: 0.95rem; color: var(--ink); outline: none;
     }
-
-    input:focus, select:focus {
-      border-color: var(--accent);
-    }
-
+    input:focus, select:focus { border-color: var(--accent); }
     .row-full { grid-column: 1 / -1; }
-
-    .btn-row {
-      display: flex;
-      gap: 10px;
-      margin-top: 16px;
-      flex-wrap: wrap;
-    }
-
+    .btn-row { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
     button {
-      flex: 1;
-      min-width: 120px;
-      padding: 13px 18px;
-      border: none;
-      border-radius: 12px;
-      font-size: 0.98rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.12s, opacity 0.12s;
+      flex: 1; min-width: 120px; padding: 13px 18px; border: none; border-radius: 12px;
+      font-size: 0.98rem; font-weight: 600; cursor: pointer;
     }
-
     button:active { transform: scale(0.98); }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #6f3658, #5a2b47);
-      color: #fff;
-    }
-
-    .btn-ghost {
-      background: transparent;
-      border: 1px solid var(--line);
-      color: var(--muted);
-    }
-
-    /* ===== 만세력: 스크롤 없이 한 화면에 딱 ===== */
-    .pillars {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-    }
-
-    @media (max-width: 480px) {
-      .pillars {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-      }
-    }
-
+    .btn-primary { background: linear-gradient(135deg, #6f3658, #5a2b47); color: #fff; }
+    .btn-ghost { background: transparent; border: 1px solid var(--line); color: var(--muted); }
+    .pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    @media (max-width: 480px) { .pillars { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
     .pillar {
-      text-align: center;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 12px 6px 14px;
-      position: relative;
-      overflow: hidden;
+      text-align: center; background: #fff; border: 1px solid var(--line);
+      border-radius: 14px; padding: 12px 6px 14px; position: relative; overflow: hidden;
     }
-
-    .pillar::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 4px;
-    }
-
+    .pillar::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
     .pillar[data-el="목"]::before { background: var(--wood); }
     .pillar[data-el="화"]::before { background: var(--fire); }
     .pillar[data-el="토"]::before { background: var(--earth); }
     .pillar[data-el="금"]::before { background: var(--metal); }
     .pillar[data-el="수"]::before { background: var(--water); }
-
-    .pillar .label {
-      font-size: 0.68rem;
-      color: var(--muted);
-      letter-spacing: 0.06em;
-      margin-bottom: 6px;
-    }
-
-    .pillar .hanja-row {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2px;
-      margin-bottom: 4px;
-    }
-
-    .pillar .hanja {
-      font-size: 1.85rem;
-      font-weight: 700;
-      line-height: 1.1;
-      font-family: "Noto Serif KR", "Batang", "Apple SD Gothic Neo", serif;
-    }
-
-    .pillar .reading {
-      font-size: 0.72rem;
-      color: var(--muted);
-      letter-spacing: 0.02em;
-      line-height: 1.25;
-    }
-
-    .pillar .reading strong {
-      color: var(--ink);
-      font-weight: 600;
-    }
-
+    .pillar .label { font-size: 0.68rem; color: var(--muted); letter-spacing: 0.06em; margin-bottom: 6px; }
+    .pillar .hanja-row { display: flex; flex-direction: column; align-items: center; gap: 2px; margin-bottom: 4px; }
+    .pillar .hanja { font-size: 1.85rem; font-weight: 700; line-height: 1.1; font-family: "Noto Serif KR", "Batang", serif; }
+    .pillar .reading { font-size: 0.72rem; color: var(--muted); }
+    .pillar .reading strong { color: var(--ink); font-weight: 600; }
     .pillar .tengod {
-      margin-top: 8px;
-      font-size: 0.7rem;
-      display: inline-block;
-      padding: 2px 7px;
-      border-radius: 999px;
-      background: #f3ebe0;
-      color: #5c4f3d;
+      margin-top: 8px; font-size: 0.7rem; display: inline-block; padding: 2px 7px;
+      border-radius: 999px; background: #f3ebe0; color: #5c4f3d;
     }
-
-    .el-dot {
-      display: inline-block;
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      margin-right: 4px;
-      vertical-align: middle;
-    }
-    .el-dot.목 { background: var(--wood); }
-    .el-dot.화 { background: var(--fire); }
-    .el-dot.토 { background: var(--earth); }
-    .el-dot.금 { background: var(--metal); }
-    .el-dot.수 { background: var(--water); }
-
-    /* 오행 바 */
-    .ohang {
-      display: grid;
-      gap: 10px;
-      margin-top: 6px;
-    }
-
-    .ohang-row {
-      display: grid;
-      grid-template-columns: 42px 1fr 28px;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.88rem;
-    }
-
-    .ohang-bar {
-      height: 10px;
-      background: #efe8dc;
-      border-radius: 999px;
-      overflow: hidden;
-    }
-
-    .ohang-fill {
-      height: 100%;
-      border-radius: 999px;
-      transition: width 0.45s ease;
-    }
-
-    .ohang-fill.목 { background: var(--wood); }
-    .ohang-fill.화 { background: var(--fire); }
-    .ohang-fill.토 { background: var(--earth); }
-    .ohang-fill.금 { background: var(--metal); }
-    .ohang-fill.수 { background: var(--water); }
-
-    /* 해석 — 8장 */
-    .story {
-      font-size: 0.96rem;
-      line-height: 1.7;
-    }
-
-    .story .chapter {
-      margin-bottom: 18px;
-      padding-bottom: 16px;
-      border-bottom: 1px dashed var(--line);
-    }
-
-    .story .chapter:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-
+    .el-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+    .el-dot.목 { background: var(--wood); } .el-dot.화 { background: var(--fire); }
+    .el-dot.토 { background: var(--earth); } .el-dot.금 { background: var(--metal); } .el-dot.수 { background: var(--water); }
+    .ohang { display: grid; gap: 10px; margin-top: 6px; }
+    .ohang-row { display: grid; grid-template-columns: 42px 1fr 28px; align-items: center; gap: 10px; font-size: 0.88rem; }
+    .ohang-bar { height: 10px; background: #efe8dc; border-radius: 999px; overflow: hidden; }
+    .ohang-fill { height: 100%; border-radius: 999px; transition: width 0.45s ease; }
+    .ohang-fill.목 { background: var(--wood); } .ohang-fill.화 { background: var(--fire); }
+    .ohang-fill.토 { background: var(--earth); } .ohang-fill.금 { background: var(--metal); } .ohang-fill.수 { background: var(--water); }
+    .story { font-size: 0.96rem; line-height: 1.7; }
+    .story .chapter { margin-bottom: 18px; padding-bottom: 16px; border-bottom: 1px dashed var(--line); }
+    .story .chapter:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
     .story .chapter-title {
-      font-size: 0.92rem;
-      font-weight: 700;
-      color: #6f3658;
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+      font-size: 0.92rem; font-weight: 700; color: #6f3658; margin-bottom: 8px;
+      display: flex; align-items: center; gap: 6px;
     }
-
     .story .chapter-title .num {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background: #6f3658;
-      color: #fff;
-      font-size: 0.75rem;
-      font-weight: 700;
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; border-radius: 50%; background: #6f3658; color: #fff;
+      font-size: 0.75rem; font-weight: 700;
     }
-
-    .story .lead {
-      font-size: 1.05rem;
-      font-weight: 600;
-      margin-bottom: 10px;
-      color: var(--ink);
-    }
-
-    .story p + p { margin-top: 8px; }
-
+    .story .lead { font-size: 1.05rem; font-weight: 600; margin-bottom: 10px; color: var(--ink); }
     .story .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      background: #f3ebe0;
-      padding: 2px 9px;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      margin: 0 2px;
+      display: inline-flex; align-items: center; gap: 4px; background: #f3ebe0;
+      padding: 2px 9px; border-radius: 8px; font-size: 0.85rem; margin: 0 2px;
     }
-
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 14px;
-    }
-
-    .chip {
-      font-size: 0.78rem;
-      padding: 5px 11px;
-      border-radius: 999px;
-      background: #f3ebe0;
-      color: #5c4f3d;
-    }
-
+    .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .chip { font-size: 0.78rem; padding: 5px 11px; border-radius: 999px; background: #f3ebe0; color: #5c4f3d; }
     .chip strong { color: var(--ink); }
-
-    .hint {
-      font-size: 0.78rem;
-      color: var(--muted);
-      margin-top: 12px;
-      text-align: center;
-    }
-
+    .hint { font-size: 0.78rem; color: var(--muted); margin-top: 12px; text-align: center; }
     .hidden { display: none !important; }
-
-    .loading {
-      text-align: center;
-      padding: 30px;
-      color: var(--muted);
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 28px;
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
-
+    .loading { text-align: center; padding: 30px; color: var(--muted); }
+    footer { text-align: center; margin-top: 28px; font-size: 0.75rem; color: var(--muted); }
     .solar-note {
-      font-size: 0.78rem;
-      color: var(--muted);
-      margin-top: 8px;
-      padding: 8px 12px;
-      background: #f8f3eb;
-      border-radius: 10px;
+      font-size: 0.78rem; color: var(--muted); margin-top: 8px; padding: 8px 12px;
+      background: #f8f3eb; border-radius: 10px;
     }
+    .bridge {
+      background: linear-gradient(135deg, #f6eaf0 0%, #fffdf8 100%);
+      border: 1px solid rgba(111, 54, 88, 0.2); border-radius: var(--radius);
+      padding: 18px; margin-bottom: 18px;
+    }
+    .bridge p { font-size: 0.92rem; color: var(--ink); line-height: 1.55; margin-bottom: 8px; }
+    .bridge .sub { font-size: 0.8rem; color: var(--muted); }
+    .bridge-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .bridge-actions a {
+      display: inline-flex; align-items: center; gap: 6px; padding: 14px 20px;
+      border-radius: 12px; font-size: 1rem; font-weight: 700; text-decoration: none;
+    }
+    .bridge-actions .go-full { background: #6f3658; color: #fff; }
   </style>
 </head>
 <body>
@@ -446,11 +167,11 @@
     <header>
       <div class="badge">四柱 · 만세력</div>
       <h1>꺼봉이가 봐주는 만세력</h1>
-      <p>생년월일 넣으면 예쁜 만세력이랑 “너는 이런 사람이야” 이야기를 해줄게</p>
+      <p>① 정보 입력 → ② 만세력 → ③ 짧은 설명 → ④ 컷툰으로 이어가기</p>
     </header>
 
     <section class="card" id="inputCard">
-      <h2>정보 입력</h2>
+      <h2>① 정보 입력</h2>
       <div class="form-grid">
         <div>
           <label>양력 / 음력</label>
@@ -513,9 +234,7 @@
           <input type="number" id="longitude" step="0.0001" value="126.9784" />
         </div>
       </div>
-      <div class="solar-note">
-        진태양시 적용: 출생지 경도로 시주를 보정합니다. (한국 표준시 기준 경도 차이 반영)
-      </div>
+      <div class="solar-note">진태양시 적용: 출생지 경도로 시주를 보정합니다.</div>
       <div class="btn-row">
         <button type="button" class="btn-primary" id="btnCalc">만세력 보기</button>
         <button type="button" class="btn-ghost" id="btnSample">예시로 채우기</button>
@@ -526,10 +245,10 @@
 
     <section id="result" class="hidden">
       <div class="card">
-        <h2>사주 만세력</h2>
+        <h2>② 사주 만세력</h2>
         <div class="meta" id="meta"></div>
         <div class="pillars" id="pillars"></div>
-        <p class="hint">시주 · 일주 · 월주 · 연주 순 · 한자 아래 음·오행</p>
+        <p class="hint">시주 · 일주 · 월주 · 연주 · 한자 아래 음·오행</p>
       </div>
 
       <div class="card">
@@ -538,21 +257,29 @@
       </div>
 
       <div class="card">
-        <h2>너의 사주에 이런 게 있어서, 너는 이런 사람이야</h2>
+        <h2>③ 짧은 설명 · 너는 이런 사람이야</h2>
         <div class="story" id="story"></div>
+      </div>
+
+      <div class="bridge" id="afterResultBridge">
+        <p><strong>④ 이제 컷툰으로 이어갈게요</strong><br>
+        만세력은 여기까지예요. 캐릭터 일러스트로 성격·연애·일·돈을 길게 풀어 주는 <strong>전체 사주 컷툰(약 96장)</strong>은 홈에서 이어집니다.</p>
+        <p class="sub">아래 버튼을 누르면 홈으로 이동해요. 「전체 사주」를 선택하면 컷툰이 시작됩니다.</p>
+        <div class="bridge-actions">
+          <a class="go-full" href="./">컷툰으로 넘어가기 →</a>
+        </div>
       </div>
     </section>
 
     <footer>
-      계산 엔진: ssaju · 진태양시 적용 · 참고용이며 전문 상담을 대체하지 않습니다<br>
-      <a href="./" style="color:#6f3658;text-decoration:none;margin-top:6px;display:inline-block;">← 홈으로</a>
+      계산 엔진: ssaju · 진태양시 · 참고용<br>
+      <a href="./" style="color:#6f3658;text-decoration:none;">← 홈 · 전체 사주 컷툰</a>
     </footer>
   </div>
 
   <script type="module">
     import { calculateSaju } from "https://cdn.jsdelivr.net/npm/ssaju@0.2.0/dist/index.mjs";
 
-    // 천간·지지 음 + 오행
     const STEM = {
       "甲": { ko: "갑", el: "목", short: "큰 나무 · 리더십", tip: "곧고 씩씩한 기운" },
       "乙": { ko: "을", el: "목", short: "풀·꽃 · 유연함", tip: "부드럽고 적응하는 기운" },
@@ -565,54 +292,34 @@
       "壬": { ko: "임", el: "수", short: "바다 · 포용", tip: "넓고 지혜로운 기운" },
       "癸": { ko: "계", el: "수", short: "이슬 · 직관", tip: "섬세하고 사색하는 기운" }
     };
-
     const BRANCH = {
-      "子": { ko: "자", el: "수", short: "쥐 · 지혜", animal: "쥐" },
-      "丑": { ko: "축", el: "토", short: "소 · 성실", animal: "소" },
-      "寅": { ko: "인", el: "목", short: "호랑이 · 용기", animal: "호랑이" },
-      "卯": { ko: "묘", el: "목", short: "토끼 · 온화", animal: "토끼" },
-      "辰": { ko: "진", el: "토", short: "용 · 변화", animal: "용" },
-      "巳": { ko: "사", el: "화", short: "뱀 · 통찰", animal: "뱀" },
-      "午": { ko: "오", el: "화", short: "말 · 열정", animal: "말" },
-      "未": { ko: "미", el: "토", short: "양 · 온순", animal: "양" },
-      "申": { ko: "신", el: "금", short: "원숭이 · 재치", animal: "원숭이" },
-      "酉": { ko: "유", el: "금", short: "닭 · 꼼꼼", animal: "닭" },
-      "戌": { ko: "술", el: "토", short: "개 · 충직", animal: "개" },
-      "亥": { ko: "해", el: "수", short: "돼지 · 인덕", animal: "돼지" }
+      "子": { ko: "자", el: "수" }, "丑": { ko: "축", el: "토" }, "寅": { ko: "인", el: "목" },
+      "卯": { ko: "묘", el: "목" }, "辰": { ko: "진", el: "토" }, "巳": { ko: "사", el: "화" },
+      "午": { ko: "오", el: "화" }, "未": { ko: "미", el: "토" }, "申": { ko: "신", el: "금" },
+      "酉": { ko: "유", el: "금" }, "戌": { ko: "술", el: "토" }, "亥": { ko: "해", el: "수" }
     };
-
     const DAY_MASTER_STORY = {
-      "甲": "너는 큰 나무처럼 곧고 앞장서는 사람이야. 목표를 세우면 밀어붙이는 힘이 있고, 주변에도 든든한 그늘이 되어 주지. 다만 너무 곧으면 부러질 수 있으니, 가끔은 바람에 몸을 맡기는 유연함도 필요해.",
-      "乙": "너는 풀이나 꽃처럼 부드럽고 잘 적응하는 사람이야. 분위기 파악이 빠르고, 사람과 사람을 자연스럽게 이어 주는 힘이 있어. 겉은 여리지만 속은 끈기 있고, 조용히 자기 자리를 키워 가는 타입이야.",
-      "丙": "너는 태양처럼 밝고 따뜻한 사람이야. 표현이 솔직하고, 분위기 메이커 역할이 잘 맞아. 열정이 넘칠 때는 주변을 환하게 비추지만, 가끔은 스스로를 돌보는 시간을 잊지 마.",
-      "丁": "너는 촛불처럼 섬세하고 집중력 있는 사람이야. 한 가지에 마음을 주면 깊이 파고들고, 작은 것에서도 의미를 찾아. 겉으로 드러내기보다 속으로 생각하는 편이라, 가까운 사람에게는 따뜻한 위로가 되어 줘.",
-      "戊": "너는 산처럼 믿음직하고 포용력 있는 사람이야. 쉽게 흔들리지 않고, 주변이 의지하기 좋은 존재감이 있어. 책임감이 강해서 혼자 짊어지려 할 때가 있으니, 가끔은 짐을 나눠도 괜찮아.",
-      "己": "너는 밭처럼 현실적이고 다정한 사람이야. 사람을 잘 챙기고, 갈등을 부드럽게 중재하는 힘이 있어. 겉으로는 평범해 보여도 속으로는 꼼꼼히 계획하고, 결국 자기 방식으로 길을 만들어 가.",
-      "庚": "너는 쇠처럼 날카롭고 결단력 있는 사람이야. 목표를 정하면 군더더기 없이 밀고 나가고, 원칙을 중요하게 여겨. 정의감이 강해서 불의를 보면 참기 어렵지만, 그 날카로움이 때로는 상처가 될 수 있으니 부드러움도 함께 가져 봐.",
-      "辛": "너는 보석처럼 섬세하고 예민한 감각을 가진 사람이야. 품질과 완성도를 중요하게 여기고, 작은 디테일에서도 차이를 느껴. 겉은 차분해 보여도 속으로는 자존심과 자부심이 단단해. 자신을 너무 깎아내리지 않아도 돼.",
-      "壬": "너는 바다처럼 넓고 지혜로운 사람이야. 포용력이 크고, 한 곳에 머무르기보다 흐름을 타는 걸 잘해. 생각의 폭이 넓어서 여러 가능성을 동시에 볼 수 있지만, 가끔은 한 곳에 뿌리를 내리는 연습도 도움이 돼.",
-      "癸": "너는 이슬이나 계곡물처럼 섬세하고 직관이 뛰어난 사람이야. 감정의 결을 잘 읽고, 조용히 사색하는 시간이 필요해. 겉으로는 조용해도 속으로는 깊은 세계를 가지고 있고, 그 세계가 네 창의력의 원천이야."
+      "甲": "너는 큰 나무처럼 곧고 앞장서는 사람이야. 목표를 세우면 밀어붙이는 힘이 있고, 주변에도 든든한 그늘이 되어 주지.",
+      "乙": "너는 풀이나 꽃처럼 부드럽고 잘 적응하는 사람이야. 분위기 파악이 빠르고, 사람을 자연스럽게 이어 주는 힘이 있어.",
+      "丙": "너는 태양처럼 밝고 따뜻한 사람이야. 표현이 솔직하고, 분위기 메이커 역할이 잘 맞아.",
+      "丁": "너는 촛불처럼 섬세하고 집중력 있는 사람이야. 한 가지에 마음을 주면 깊이 파고들고, 작은 것에서도 의미를 찾아.",
+      "戊": "너는 산처럼 믿음직하고 포용력 있는 사람이야. 쉽게 흔들리지 않고, 주변이 의지하기 좋은 존재감이 있어.",
+      "己": "너는 밭처럼 현실적이고 다정한 사람이야. 사람을 잘 챙기고, 갈등을 부드럽게 중재하는 힘이 있어.",
+      "庚": "너는 쇠처럼 날카롭고 결단력 있는 사람이야. 목표를 정하면 군더더기 없이 밀고 나가고, 원칙을 중요하게 여겨.",
+      "辛": "너는 보석처럼 섬세하고 예민한 감각을 가진 사람이야. 품질과 완성도를 중요하게 여기고, 작은 디테일에서도 차이를 느껴.",
+      "壬": "너는 바다처럼 넓고 지혜로운 사람이야. 포용력이 크고, 한 곳에 머무르기보다 흐름을 타는 걸 잘해.",
+      "癸": "너는 이슬처럼 섬세하고 직관이 뛰어난 사람이야. 감정의 결을 잘 읽고, 조용히 사색하는 시간이 필요해."
     };
-
-    const EL_TIP = {
-      "목": "성장·확장·시작",
-      "화": "표현·열정·밝힘",
-      "토": "안정·중재·포용",
-      "금": "결단·원칙·정리",
-      "수": "흐름·직관·지혜"
-    };
-
+    const EL_TIP = { "목": "성장·확장", "화": "표현·열정", "토": "안정·중재", "금": "결단·원칙", "수": "흐름·직관" };
     const $ = (id) => document.getElementById(id);
 
     $("place").addEventListener("change", () => {
-      const isCustom = $("place").value === "custom";
-      $("customLongWrap").classList.toggle("hidden", !isCustom);
+      $("customLongWrap").classList.toggle("hidden", $("place").value !== "custom");
     });
-
     function getLongitude() {
-      const place = $("place").value;
-      if (place === "custom") return parseFloat($("longitude").value) || 126.9784;
-      return parseFloat(place);
+      return $("place").value === "custom"
+        ? (parseFloat($("longitude").value) || 126.9784)
+        : parseFloat($("place").value);
     }
 
     function renderPillars(r) {
@@ -620,16 +327,13 @@
       const labels = { hour: "시주 時", day: "일주 日", month: "월주 月", year: "연주 年" };
       const box = $("pillars");
       box.innerHTML = "";
-
       order.forEach((key) => {
         const d = r.pillarDetails[key];
         const tg = r.tenGods[key];
         const st = STEM[d.stem] || { ko: d.stemKo || "", el: d.element.stem };
         const br = BRANCH[d.branch] || { ko: d.branchKo || "", el: d.element.branch };
         const mainEl = d.element.stem;
-
-        const colorVar = mainEl === "목" ? "wood" : mainEl === "화" ? "fire" : mainEl === "토" ? "earth" : mainEl === "금" ? "metal" : "water";
-
+        const colorVar = { "목": "wood", "화": "fire", "토": "earth", "금": "metal", "수": "water" }[mainEl] || "earth";
         const div = document.createElement("div");
         div.className = "pillar";
         div.dataset.el = mainEl;
@@ -643,8 +347,7 @@
             <div class="hanja">${d.branch}</div>
             <div class="reading"><strong>${br.ko}</strong>·${br.el}</div>
           </div>
-          <div class="tengod">${tg.stem}${key === "day" ? " (일간)" : ""} / ${tg.branch}</div>
-        `;
+          <div class="tengod">${tg.stem}${key === "day" ? " (일간)" : ""} / ${tg.branch}</div>`;
         box.appendChild(div);
       });
     }
@@ -652,18 +355,13 @@
     function renderOhang(r) {
       const fe = r.fiveElements || {};
       const total = Object.values(fe).reduce((a, b) => a + b, 0) || 1;
-      const order = ["목", "화", "토", "금", "수"];
-      const box = $("ohang");
-      box.innerHTML = order.map((el) => {
+      $("ohang").innerHTML = ["목", "화", "토", "금", "수"].map((el) => {
         const n = fe[el] || 0;
         const pct = Math.round((n / total) * 100);
-        return `
-          <div class="ohang-row">
-            <span><span class="el-dot ${el}"></span>${el}</span>
-            <div class="ohang-bar"><div class="ohang-fill ${el}" style="width:${pct}%"></div></div>
-            <span>${n}</span>
-          </div>
-        `;
+        return `<div class="ohang-row">
+          <span><span class="el-dot ${el}"></span>${el}</span>
+          <div class="ohang-bar"><div class="ohang-fill ${el}" style="width:${pct}%"></div></div>
+          <span>${n}</span></div>`;
       }).join("");
     }
 
@@ -671,131 +369,48 @@
       const dayStem = r.dayStem || r.pillarDetails.day.stem;
       const dayInfo = STEM[dayStem] || {};
       const base = DAY_MASTER_STORY[dayStem] || "너의 일간이 독특한 조합을 이루고 있어.";
-      const interp = (r.advanced && r.advanced.interpretation) ? r.advanced.interpretation.trim() : "";
       const strength = r.advanced?.dayStrength;
-      const yongsin = (r.advanced?.yongsin || []).join(", ");
-      const gilsin = (r.advanced?.sinsal?.gilsin || []).join(", ");
-      const hyungsin = (r.advanced?.sinsal?.hyungsin || []).join(", ");
       const geukguk = r.advanced?.geukguk || "";
-
+      const yongsin = (r.advanced?.yongsin || []).join(", ");
       const fe = r.fiveElements || {};
       const sorted = Object.entries(fe).sort((a, b) => b[1] - a[1]);
       const strongest = sorted[0];
       const weakest = sorted[sorted.length - 1];
-
-      const hour = r.pillarDetails.hour;
-      const month = r.pillarDetails.month;
-      const year = r.pillarDetails.year;
-
-      const hourSt = STEM[hour.stem];
-      const hourBr = BRANCH[hour.branch];
-      const monthSt = STEM[month.stem];
-      const monthBr = BRANCH[month.branch];
-      const yearSt = STEM[year.stem];
-      const yearBr = BRANCH[year.branch];
-
-      const tg = r.tenGods || {};
-
-      let chapters = [];
-
-      chapters.push(`
-        <div class="chapter">
-          <div class="chapter-title"><span class="num">1</span> 일간 · 너 자신</div>
-          <p class="lead">${dayInfo.ko || ""}${dayStem} · ${dayInfo.short || ""}</p>
-          <p>${base}</p>
-        </div>
-      `);
-
-      chapters.push(`
-        <div class="chapter">
-          <div class="chapter-title"><span class="num">2</span> 시주 · 내면과 어린 시절</div>
-          <p>시주에 <span class="tag">${hour.stem}${hour.branch}</span>
-          (<strong>${hourSt?.ko}·${hourSt?.el}</strong> / <strong>${hourBr?.ko}·${hourBr?.el}</strong>)이 있어서,
-          ${hourSt?.tip || "이 기운"}이 네 속마음과 초반 인생에 스며들어 있어.
-          십성으로는 시간이 <span class="tag">${tg.hour?.stem || ""}</span>, 시지가 <span class="tag">${tg.hour?.branch || ""}</span>이야.</p>
-        </div>
-      `);
-
-      chapters.push(`
-        <div class="chapter">
-          <div class="chapter-title"><span class="num">3</span> 월주 · 사회와 환경</div>
-          <p>월주에 <span class="tag">${month.stem}${month.branch}</span>
-          (<strong>${monthSt?.ko}·${monthSt?.el}</strong> / <strong>${monthBr?.ko}·${monthBr?.el}</strong>)이 있어서,
-          네가 세상과 맞닿는 방식에 이 기운이 크게 작용해.
-          월간 십성 <span class="tag">${tg.month?.stem || ""}</span>, 월지 십성 <span class="tag">${tg.month?.branch || ""}</span>이 사회에서의 역할과 연결돼.</p>
-        </div>
-      `);
-
-      chapters.push(`
-        <div class="chapter">
-          <div class="chapter-title"><span class="num">4</span> 연주 · 기반과 뿌리</div>
-          <p>연주에 <span class="tag">${year.stem}${year.branch}</span>
-          (<strong>${yearSt?.ko}·${yearSt?.el}</strong> / <strong>${yearBr?.ko}·${yearBr?.el}</strong>)이 있어서,
-          네 출발점과 가문의 기운이 여기에 담겨 있어.
-          연간 <span class="tag">${tg.year?.stem || ""}</span>, 연지 <span class="tag">${tg.year?.branch || ""}</span>이 네 뿌리를 말해 줘.</p>
-        </div>
-      `);
-
       let ohangText = "";
       if (strongest && strongest[1] > 0) {
-        ohangText = `오행 중 <span class="tag"><span class="el-dot ${strongest[0]}"></span>${strongest[0]}</span>이(가) 가장 많아. 그래서 ${EL_TIP[strongest[0]]} 쪽으로 기운이 기울어져 있어.`;
+        ohangText = `오행 중 <span class="tag"><span class="el-dot ${strongest[0]}"></span>${strongest[0]}</span>이(가) 두드러져 ${EL_TIP[strongest[0]]} 쪽 기운이 강해.`;
         if (weakest && weakest[1] === 0) {
-          ohangText += ` 반면 <span class="tag"><span class="el-dot ${weakest[0]}"></span>${weakest[0]}</span>은(는) 거의 없어서, 그 기운을 의식적으로 채우면 균형이 더 좋아질 수 있어.`;
-        } else if (weakest && weakest[1] < strongest[1]) {
-          ohangText += ` <span class="tag"><span class="el-dot ${weakest[0]}"></span>${weakest[0]}</span>은(는) 상대적으로 약해서, ${EL_TIP[weakest[0]]} 쪽을 보완하면 도움이 돼.`;
+          ohangText += ` <span class="tag"><span class="el-dot ${weakest[0]}"></span>${weakest[0]}</span>은(는) 거의 없어, 그 기운을 의식하면 균형에 도움이 돼.`;
         }
       }
-      chapters.push(`
-        <div class="chapter">
-          <div class="chapter-title"><span class="num">5</span> 오행 균형</div>
-          <p>${ohangText || "오행이 비교적 고르게 분포되어 있어."}</p>
-        </div>
-      `);
-
       let strengthLine = "";
       if (strength) {
         const map = { strong: "일간이 강한 편", weak: "일간이 약한 편", neutral: "일간이 중화된 편" };
-        strengthLine = `일간 세기로는 <span class="tag">${map[strength.strength] || strength.strength}</span>이야.`;
-        if (geukguk) strengthLine += ` 격국은 <span class="tag">${geukguk}</span>으로 잡혀.`;
+        strengthLine = map[strength.strength] || strength.strength;
+        if (geukguk) strengthLine += ` · 격국 ${geukguk}`;
       }
-      chapters.push(`
+      return `
         <div class="chapter">
-          <div class="chapter-title"><span class="num">6</span> 일간 세기와 격국</div>
-          <p>${strengthLine || "일간 세기와 격국 정보를 참고해 봐."}</p>
+          <div class="chapter-title"><span class="num">1</span> 일간</div>
+          <p class="lead">${dayInfo.ko || ""}${dayStem} · ${dayInfo.short || ""}</p>
+          <p>${base}</p>
         </div>
-      `);
-
-      let sinLine = "";
-      if (yongsin) sinLine += `도움이 되는 기운(용신)으로는 <span class="tag">${yongsin}</span> 쪽이 언급돼. 이 기운을 의식하면 흐름이 더 부드러워질 수 있어.`;
-      if (gilsin) sinLine += ` 길신: <span class="tag">${gilsin}</span>.`;
-      if (hyungsin) sinLine += ` 주의할 신살: <span class="tag">${hyungsin}</span> — 너무 걱정할 필요는 없고, ‘이런 경향이 있을 수 있다’ 정도로만 기억해 둬.`;
-      chapters.push(`
         <div class="chapter">
-          <div class="chapter-title"><span class="num">7</span> 용신과 신살</div>
-          <p>${sinLine || "특별한 신살 강조 사항은 크게 드러나지 않아."}</p>
+          <div class="chapter-title"><span class="num">2</span> 오행 · 세기</div>
+          <p>${ohangText || "오행이 비교적 고르게 분포되어 있어."}<br>
+          ${strengthLine ? `일간 세기: <span class="tag">${strengthLine}</span>` : ""}
+          ${yongsin ? ` · 용신: <span class="tag">${yongsin}</span>` : ""}</p>
         </div>
-      `);
-
-      const extra = interp ? `<p style="margin-top:8px;">${interp.replace(/\n/g, "<br>")}</p>` : "";
-      chapters.push(`
         <div class="chapter">
-          <div class="chapter-title"><span class="num">8</span> 종합 · 한 줄로 말하면</div>
-          <p>네 사주는 <strong>${dayInfo.ko || ""}${dayStem}</strong>을 중심으로,
-          ${strongest ? strongest[0] + " 기운이 두드러지고" : "여러 기운이 섞여"}
-          ${strength?.strength === "strong" ? "일간이 든든한 편" : strength?.strength === "weak" ? "일간이 섬세한 편" : "일간이 균형 잡힌 편"}이야.
-          위에 나온 시·월·연의 기운이 각각 다른 층위에서 너를 만들고 있으니,
-          한 가지만 보고 단정하지 말고 전체 그림을 같이 봐 줘.</p>
-          ${extra}
-          <p style="margin-top:12px;color:var(--muted);font-size:0.88rem;">이 설명은 사주의 기본 구조를 바탕으로 한 참고용이야. 실제 인생은 훨씬 더 많은 변수로 만들어져.</p>
-        </div>
-      `);
-
-      return chapters.join("");
+          <div class="chapter-title"><span class="num">3</span> 한 줄 요약</div>
+          <p>네 사주는 <strong>${dayInfo.ko || ""}${dayStem}</strong>을 중심으로
+          ${strongest ? strongest[0] + " 기운이 눈에 띄는" : "여러 기운이 섞인"} 편이야.
+          자세한 성격·연애·일·돈 이야기는 아래 버튼으로 컷툰에서 이어갈게.</p>
+        </div>`;
     }
 
     function renderMeta(r) {
-      const d = r.pillarDetails.day;
-      const dayStem = r.dayStem || d.stem;
+      const dayStem = r.dayStem || r.pillarDetails.day.stem;
       const info = STEM[dayStem];
       const lmt = r.normalized?.localMeanTime;
       let solarChip = "";
@@ -807,50 +422,29 @@
         <span class="chip">${r.input.gender === "남" ? "남성" : "여성"}</span>
         <span class="chip">${r.input.calendar === "solar" ? "양력" : "음력"} ${r.input.year}.${r.input.month}.${r.input.day} ${String(r.input.hour).padStart(2,"0")}:${String(r.input.minute).padStart(2,"0")}</span>
         ${r.advanced?.geukguk ? `<span class="chip">격국 <strong>${r.advanced.geukguk}</strong></span>` : ""}
-        ${solarChip}
-      `;
+        ${solarChip}`;
     }
 
     async function calc() {
-      const year = +$("year").value;
-      const month = +$("month").value;
-      const day = +$("day").value;
-      const hour = +$("hour").value;
-      const minute = +$("minute").value;
-      const gender = $("gender").value;
-      const calendar = $("calendar").value;
-      const leap = $("leap").value === "true";
-      const longitude = getLongitude();
-
-      if (!year || !month || !day) {
-        alert("연·월·일을 확인해 주세요.");
-        return;
-      }
-
+      const year = +$("year").value, month = +$("month").value, day = +$("day").value;
+      const hour = +$("hour").value, minute = +$("minute").value;
+      const gender = $("gender").value, calendar = $("calendar").value;
+      const leap = $("leap").value === "true", longitude = getLongitude();
+      if (!year || !month || !day) { alert("연·월·일을 확인해 주세요."); return; }
       $("loading").classList.remove("hidden");
       $("result").classList.add("hidden");
-
       try {
         const r = calculateSaju({
-          year, month, day, hour, minute,
-          gender,
-          calendar,
-          leap,
-          timezone: "Asia/Seoul",
-          longitude,
-          applyLocalMeanTime: true
+          year, month, day, hour, minute, gender, calendar, leap,
+          timezone: "Asia/Seoul", longitude, applyLocalMeanTime: true
         });
-
-        renderMeta(r);
-        renderPillars(r);
-        renderOhang(r);
+        renderMeta(r); renderPillars(r); renderOhang(r);
         $("story").innerHTML = buildStory(r);
-
         $("result").classList.remove("hidden");
         $("result").scrollIntoView({ behavior: "smooth", block: "start" });
       } catch (e) {
         console.error(e);
-        alert("계산 중 오류가 났어요. 날짜·시간을 다시 확인해 주세요.\n" + (e.message || ""));
+        alert("계산 중 오류가 났어요.\n" + (e.message || ""));
       } finally {
         $("loading").classList.add("hidden");
       }
@@ -858,16 +452,10 @@
 
     $("btnCalc").addEventListener("click", calc);
     $("btnSample").addEventListener("click", () => {
-      $("year").value = 1990;
-      $("month").value = 12;
-      $("day").value = 20;
-      $("hour").value = 16;
-      $("minute").value = 30;
-      $("gender").value = "남";
-      $("calendar").value = "solar";
-      $("leap").value = "false";
-      $("place").value = "126.9784";
-      $("customLongWrap").classList.add("hidden");
+      $("year").value = 1990; $("month").value = 12; $("day").value = 20;
+      $("hour").value = 16; $("minute").value = 30; $("gender").value = "남";
+      $("calendar").value = "solar"; $("leap").value = "false";
+      $("place").value = "126.9784"; $("customLongWrap").classList.add("hidden");
       calc();
     });
   </script>
