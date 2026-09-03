@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/kkeobong", "destination": "/index.html" },
+    { "source": "/kkeobong/", "destination": "/index.html" },
+    { "source": "/kkeobong/:path*", "destination": "/:path*" }
+  ]
+}
